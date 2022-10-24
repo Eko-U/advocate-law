@@ -1,0 +1,26 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+
+  @include responsive(tab-port) {
+    font-size: 56.25%;
+  }
+
+  @media only screen and (min-width: 87.5em) {
+    font-size: 70%;
+  }
+}
+
+body {
+  font-family: 'Nunito', sans-serif;
+  font-weight: 500;
+  color: $color-black;
+  box-sizing: inherit;
+}

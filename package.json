@@ -1,0 +1,25 @@
+{
+  "name": "law",
+  "version": "1.0.0",
+  "description": "law firm official website",
+  "main": "index.js",
+  "scripts": {
+    "devserver": "live-server",
+    "watch:sass": "node-sass sass/main.scss css/style.css -w",
+    "start": "npm-run-all --parallel devserver watch:sass",
+
+    "compile:sass": "node-sass sass/main.scss css/style.comp.css",
+    "prefix:css": "postcss --use autoprefixer --browser 'last 10 version' css/style.comp.css -o css/style.prefix.css",
+    "compress:css": "node-sass css/style.prefix.css css/style.css --output-style compressed",
+
+    "build:process": "npm-run-all --parallel compile:css prefix:css compress:css"
+  },
+  "author": "gift",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^10.4.12",
+    "node-sass": "^7.0.3",
+    "npm-run-all": "^4.1.5",
+    "postcss-cli": "^10.0.0"
+  }
+}

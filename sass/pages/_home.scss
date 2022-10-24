@@ -1,0 +1,219 @@
+.about-us {
+  padding: 5rem 0 10rem 0;
+  display: grid;
+  grid-template-columns: min-content 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(min-content, max-content));
+  column-gap: 3rem;
+  row-gap: 5rem;
+
+  @include responsive (tab-port) {
+    grid-template-columns: 1fr;
+  }
+
+  @include responsive(tab-land) {
+    padding: 13rem 0 10rem 0;
+  }
+
+  &__lawyer {
+    height: 45rem;
+    background-color: $color-secondary;
+    @include responsive (tab-port) {
+      height: 35rem;
+      justify-self: start;
+    }
+    @include responsive (phone) {
+      height: 25rem;
+    }
+  }
+
+  &__img {
+    max-width: 40rem;
+    transform: translateX(-2rem) translateY(-3rem);
+    // @media only screen and (max-width: 31.25em) {
+    //   transform: translate(0);
+    //   max-width: 100%;
+    // }
+    @include responsive (tab-port) {
+      max-width: 30rem;
+    }
+     @include responsive (phone) {
+      max-width: 20rem;
+    }
+  }
+
+  &__text {
+    display: grid;
+    align-items: stretch;
+    justify-items: start;
+
+    @include responsive(tab-land) {
+      grid-column: 1 / -1;
+    }
+  }
+
+  &__btn {
+    align-self: end;
+  }
+  
+  .heading-tertiary {
+    align-self: end;
+    &::after {
+      content: "";
+      display: inline-block;
+      width: 10rem;
+      height: 2px;
+      background-color: rgb(0, 0, 0);
+      margin-left: 1rem;
+    }
+  }
+
+  .paragraph {
+    align-self: center;
+  }
+}
+
+.work-do {
+  padding: 10rem 0;
+  background-color: $color-primary;
+  color: $color-white;
+  display: grid;
+  grid-template-columns: 5rem repeat(3, 1fr) 5rem;
+  grid-template-columns: subgrid;
+  row-gap: 7rem;
+
+  .heading {
+    grid-row: 1 / 2;
+    grid-column: 2 / 8;
+    justify-self: center;
+
+    .heading-tertiary {
+      display: grid;
+      grid-auto-flow: column;
+      gap: .5rem;
+      &::before,
+      &::after {
+      content: "";
+      display: inline-block;
+      width: 5rem;
+      height: 2px;
+      background-color: $color-white;
+      align-self: end;
+    }
+    }
+  }
+
+  &__content {
+    grid-row: 2 / 3;
+    grid-column: 2 / 8;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap: 3rem;
+
+    div {
+      background-color: $color-primary-light;
+      padding: 1rem 2rem;
+      border-bottom: 5px solid $color-secondary;
+
+      display: grid;
+      grid-template-columns: min-content 1fr;
+      gap: 1.5rem;
+
+      .heading-tertiary {
+        grid-column: 2 / 3;
+      }
+
+      p {
+        grid-row: 2 / 3;
+        grid-column: 2 / 3;
+      }
+    }
+  }
+
+  &__btn {
+    grid-column: 1 / -1;
+    justify-self: center;
+  }
+}
+
+
+.review {
+  padding: 10rem 0;
+
+  &__clients {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap: 3rem;
+
+    & > div {
+      box-shadow: 0 .6rem .5rem rgba($color-black, .4);
+      border-bottom: 3px solid $color-secondary;
+      padding: 3rem;
+
+      display: grid;
+      gap: 5rem;
+
+      & > p:first-child {
+        text-align: center;
+        hyphens: auto;
+        -ms-hyphens: auto;
+      }
+
+      & > p:last-child {
+        justify-self: end;
+        font-style: italic;
+      }
+    }
+  }
+}
+
+.benefit {
+  transform: translateY(-50%);
+
+  @include responsive(tab-land) {
+    padding: 10rem 0;
+    transform: translateY(0)
+  }
+
+  &__content {
+    grid-row: 2 / 3;
+    grid-column: 2 / 8;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap: 3rem;
+
+    div {
+      color: $color-white;
+      background-color: $color-primary-light;
+      padding: 3rem 2rem;
+
+      display: grid;
+      grid-template-columns: min-content 1fr;
+      gap: 1.5rem;
+
+      .heading-tertiary {
+        grid-column: 2 / 3;
+      }
+
+      p {
+        grid-row: 2 / 3;
+        grid-column: 2 / 3;
+        margin-top: -1.8rem;
+      }
+
+      @media only screen and (max-width: 50em) {
+        p, .heading-4 {
+          grid-column: 1 / -1;
+        }
+        .heading-4 {
+          grid-row: 2 / 3;
+        }
+        p {
+          grid-row: 3 / 4;
+          margin-top: 0;
+        }
+      }
+    }
+  }
+}

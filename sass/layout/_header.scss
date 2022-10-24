@@ -1,0 +1,26 @@
+.header {
+  background-image: linear-gradient(rgba($color-primary, .7), rgba($color-primary, .7)), url(../img/header-bk.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+
+  &__content {
+    width: 60%;
+    justify-self: center;
+    text-align: center;
+
+    @media only screen and (max-width: 50em) {
+      width: 80%;
+      margin-top: 7rem;
+    }
+    @include responsive(phone) {
+      width: 100%;
+      padding: 0 2rem;
+      justify-self: start;
+      text-align: left;
+    }
+  }
+}

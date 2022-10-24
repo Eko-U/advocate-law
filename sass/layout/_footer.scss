@@ -1,0 +1,104 @@
+.footer {
+  padding-top: 10rem;
+  padding-bottom: 5rem;
+  background-image: linear-gradient(rgba($color-primary, .9), rgba($color-primary, .9)), url(../img/header-bk.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: $color-white;
+
+  display: grid;
+  grid-template-columns: minmax(3rem, 10rem) 1fr minmax(3rem, 10rem);
+
+  @include responsive(tab-port) {
+    //  grid-template-columns: minmax(3rem, 5rem) 1fr minmax(3rem, 5rem);
+     grid-template-columns: 1fr;
+     padding: 0 4rem;
+     padding-top: 5rem;
+  }
+  &__heading {
+    font-size: 2.5rem;
+  }
+  &__logos {
+    display: grid;
+    grid-template-columns: min-content max-content;
+    gap: 2rem;
+  }
+
+  &-logo__text {
+    display: flex;
+    flex-direction: column;
+    span:first-child {
+      font-size: 3rem;
+      font-weight: bolder;
+      color: $color-secondary;
+    }
+  }
+
+  &__content {
+    grid-column: 2 / 3;
+    display: grid;
+    grid-template-columns: min-content 1fr;
+    gap: 4rem;
+
+    @include responsive(tab-port) {
+      grid-column: 1 / -1;
+    }
+  }
+
+  &__nav {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap: 4rem;
+
+    @include responsive (tab-land) {
+      grid-column: 1 / -1;
+      grid-row: 2 / 3;
+    }
+  }
+
+  .copyright {
+    grid-column: 1 / -1;
+  }
+
+  &__list {
+    display: grid;
+    gap: 1.5rem;
+    list-style-type: none;
+  }
+
+  &__links {
+    &:link,
+    &:visited {
+      text-decoration: none;
+      color: $color-white;
+      font-weight: bold;
+      transition: all .2s;
+
+      display: flex;
+      gap: 1rem;
+
+      & > span:first-child,  & > .icon {
+        color: $color-secondary;
+        fill: currentColor;
+      }
+    }
+
+    &:hover {
+      font-weight: bolder;
+      color: $color-grey-light-1;
+    }
+  }
+
+  &-bottom {
+    grid-column: 1 / -1;
+    background-color: $color-primary;
+    display: flex;
+      justify-content: flex-end;
+
+    &__consult {
+      color: $color-white;
+      background-color: $color-secondary;
+      padding: .7rem 1.5rem;
+    }
+  }
+}

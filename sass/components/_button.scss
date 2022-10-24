@@ -1,0 +1,22 @@
+.btn {
+  &,
+  &:link,
+  &:visited {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bolder;
+    padding: 1.5rem 5rem;
+    display: inline-block;
+    cursor: pointer;
+  }
+
+
+  &--fill {
+    background-color: $color-secondary;
+    border: 2px solid transparent;
+  }
+
+  &--outline {
+    border: 2px solid $color-secondary;
+  }
+}

@@ -1,0 +1,95 @@
+.nav-top {
+  display: grid;
+  grid-template-columns: repeat(2, max-content);
+  justify-content: space-between;
+  align-items: center;
+  background-color: $color-primary;
+
+  &__phone {
+    fill: $color-secondary;
+  }
+  &__call {
+    display: flex;
+    gap: 2rem;
+    margin-left: 1rem;
+    color: $color-white;
+
+    &--number {
+      display: flex;
+      gap: .7rem;
+    }
+
+    @include responsive(tab-port) {
+      flex-direction: column;
+      gap: .4rem;
+    }
+  }
+
+  &__consult {
+    padding: .7rem 1.5rem;
+    background-color: $color-secondary;
+    color: #fff;
+    text-align: center;
+    cursor: pointer;
+    @include grid-center;
+
+    &:hover {
+      background-color: rgba($color-secondary, .97);
+    }
+    @include responsive(tab-port) {
+     align-self: stretch;
+    }
+  }
+}
+
+.navigation {
+  padding: 1rem .5rem;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  border-bottom: 1px solid rgb(187, 184, 184);
+
+  &__list {
+    justify-self: end;
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(5, minmax(5rem, 1fr));
+
+    @media only screen and (max-width: 56.25em) {
+      display: none;
+    }
+  }
+
+  &__items {
+    text-align: center;
+    align-self: stretch;
+  }
+
+  &__links {
+    text-decoration: none;
+    color: $color-white;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 400;
+  }
+
+  &-btn {
+    justify-self: end;
+    color: $color-white;
+    fill: currentColor;
+    display: none;
+    
+    @media only screen and (max-width: 56.25em) {
+      display: block;
+    }
+  }
+}
+
+.icon {
+  height: 2rem;
+  width: 2rem;
+
+  &-big {
+    height: 4.5rem;
+    width: 4.5rem;
+  }
+}
