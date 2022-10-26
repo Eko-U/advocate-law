@@ -373,12 +373,15 @@ body {
     font-weight: 400; }
   .navigation-btn {
     justify-self: end;
-    color: #fff;
-    fill: currentColor;
     display: none; }
     @media only screen and (max-width: 56.25em) {
       .navigation-btn {
-        display: block; } }
+        display: block;
+        fill: #ad7f62;
+        cursor: pointer;
+        transition: all .2s; }
+        .navigation-btn:hover {
+          transform: rotate(180deg); } }
 
 .icon {
   height: 2rem;
@@ -482,11 +485,14 @@ body {
       display: grid;
       grid-template-columns: min-content 1fr;
       gap: 1.5rem; }
-      .work-do__content div .heading-tertiary {
-        grid-column: 2 / 3; }
       .work-do__content div p {
-        grid-row: 2 / 3;
         grid-column: 2 / 3; }
+        @media only screen and (max-width: 18.75em) {
+          .work-do__content div p {
+            grid-column: 1 / -1; } }
+      @media only screen and (max-width: 18.75em) {
+        .work-do__content div .heading-4 {
+          grid-column: 1 / -1; } }
   .work-do__btn {
     grid-column: 1 / -1;
     justify-self: center; }
@@ -544,3 +550,12 @@ body {
         .benefit__content div p {
           grid-row: 3 / 4;
           margin-top: 0; } }
+
+/* padding for all the section */
+@media only screen and (max-width: 25em) {
+  .about-us,
+  .work-do,
+  .review,
+  .benefit {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem; } }

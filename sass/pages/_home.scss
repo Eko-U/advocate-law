@@ -13,7 +13,6 @@
   @include responsive(tab-land) {
     padding: 13rem 0 10rem 0;
   }
-
   &__lawyer {
     height: 45rem;
     background-color: $color-secondary;
@@ -29,10 +28,6 @@
   &__img {
     max-width: 40rem;
     transform: translateX(-2rem) translateY(-3rem);
-    // @media only screen and (max-width: 31.25em) {
-    //   transform: translate(0);
-    //   max-width: 100%;
-    // }
     @include responsive (tab-port) {
       max-width: 30rem;
     }
@@ -119,13 +114,19 @@
       grid-template-columns: min-content 1fr;
       gap: 1.5rem;
 
-      .heading-tertiary {
+      p {
         grid-column: 2 / 3;
+
+        @media only screen and (max-width: 18.75em) {
+          grid-column: 1 / -1;
+        }
       }
 
-      p {
-        grid-row: 2 / 3;
-        grid-column: 2 / 3;
+      .heading-4 {
+
+        @media only screen and (max-width: 18.75em) {
+          grid-column: 1 / -1;
+        }
       }
     }
   }
@@ -215,5 +216,16 @@
         }
       }
     }
+  }
+}
+
+/* padding for all the section */
+.about-us,
+.work-do,
+.review,
+.benefit {
+  @media only screen and (max-width: 25em) {
+    padding-left: $spacing-sm;
+    padding-right: $spacing-sm;
   }
 }

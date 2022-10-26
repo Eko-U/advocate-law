@@ -74,12 +74,17 @@
 
   &-btn {
     justify-self: end;
-    color: $color-white;
-    fill: currentColor;
     display: none;
     
     @media only screen and (max-width: 56.25em) {
       display: block;
+      fill: $color-secondary;
+      cursor: pointer;
+      transition: all .2s;
+
+      &:hover {
+        transform: rotate(180deg);
+      }
     }
   }
 }
