@@ -98,12 +98,80 @@
   }
 }
 
+
+.side-nav {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 20vw;
+  height: 100vh;
+  z-index: 9999;
+
+  background-color: $color-primary;
+  padding: 3rem;
+
+  transition: all .2s;
+  transition-duration: 1s;
+  transition-timing-function: ease-out;
+
+
+  @include responsive(phone) {
+    width: 70vw;
+  }
+  &__content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  &__links {
+    &:link,
+    &:visited {
+      text-transform: uppercase;
+      text-decoration: none;
+      font-weight: bolder;
+      color: $color-white;
+      transition: color .2s;
+    }
+
+    &:hover {
+      color: $color-secondary;
+    }
+  }
+
+  &__close {
+    
+    align-self: flex-end;
+    height: 5rem;
+    width: 5rem;
+    border-radius: 50%;
+    opacity: .8;
+
+    .close {
+      fill: $color-white;
+
+      &:hover {
+        fill: $color-secondary;
+      }
+    }
+  }
+}
+
 .icon {
   height: 2rem;
   width: 2rem;
 
+  cursor: pointer;
+
   &-big {
     height: 4.5rem;
     width: 4.5rem;
+    cursor: pointer;
   }
 }

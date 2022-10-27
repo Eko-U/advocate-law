@@ -45,7 +45,8 @@ body {
   font-weight: 400;
   color: #555;
   box-sizing: inherit;
-  position: relative; }
+  position: relative;
+  overflow-x: hidden; }
 
 .heading-primary {
   line-height: 1;
@@ -130,6 +131,10 @@ body {
   -ms-hyphens: auto;
   hyphens: auto; }
 
+.grid-center {
+  display: grid;
+  place-items: center; }
+
 .flex-col {
   flex-direction: column !important; }
 
@@ -158,6 +163,12 @@ body {
     @media only screen and (max-width: 56.25em) {
       .body-copy--large {
         font-size: 2.1rem; } }
+
+.translate-0 {
+  transform: translateX(0); }
+
+.translate-x {
+  transform: translateX(50rem); }
 
 .footer {
   grid-column: full-start / full-end;
@@ -426,12 +437,59 @@ body {
         .navigation-btn:hover {
           transform: rotate(180deg); } }
 
+.side-nav {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 20vw;
+  height: 100vh;
+  z-index: 9999;
+  background-color: #283c61;
+  padding: 3rem;
+  transition: all .2s;
+  transition-duration: 1s;
+  transition-timing-function: ease-out; }
+  @media only screen and (max-width: 35.7em) {
+    .side-nav {
+      width: 70vw; } }
+  @media only screen and (min-width: 112.5em) {
+    .side-nav {
+      width: 70vw; } }
+  .side-nav__content {
+    display: flex;
+    flex-direction: column; }
+  .side-nav__list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem; }
+  .side-nav__links:link, .side-nav__links:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: bolder;
+    color: #fff;
+    transition: color .2s; }
+  .side-nav__links:hover {
+    color: #ad7f62; }
+  .side-nav__close {
+    align-self: flex-end;
+    height: 5rem;
+    width: 5rem;
+    border-radius: 50%;
+    opacity: .8; }
+    .side-nav__close .close {
+      fill: #fff; }
+      .side-nav__close .close:hover {
+        fill: #ad7f62; }
+
 .icon {
   height: 2rem;
-  width: 2rem; }
+  width: 2rem;
+  cursor: pointer; }
   .icon-big {
     height: 4.5rem;
-    width: 4.5rem; }
+    width: 4.5rem;
+    cursor: pointer; }
 
 .about-us {
   grid-column: center-start / center-end;
