@@ -421,12 +421,12 @@ body {
     .about-us {
       grid-column: full-start / full-end;
       grid-template-columns: 1fr;
-      padding: 0 3rem; } }
+      padding: 6rem 3rem; } }
   @media only screen and (min-width: 112.5em) {
     .about-us {
       grid-column: full-start / full-end;
       grid-template-columns: 1fr;
-      padding: 0 3rem; } }
+      padding: 6rem 3rem; } }
   .about-us__lawyer {
     height: 45rem;
     background-color: #ad7f62; }
@@ -436,10 +436,12 @@ body {
         justify-self: start; } }
     @media only screen and (max-width: 35.7em) {
       .about-us__lawyer {
-        height: 25rem; } }
+        height: 30rem;
+        background-color: transparent; } }
     @media only screen and (min-width: 112.5em) {
       .about-us__lawyer {
-        height: 25rem; } }
+        height: 30rem;
+        background-color: transparent; } }
   .about-us__img {
     max-width: 40rem;
     transform: translateX(-2rem) translateY(-3rem); }
@@ -448,10 +450,12 @@ body {
         max-width: 30rem; } }
     @media only screen and (max-width: 35.7em) {
       .about-us__img {
-        max-width: 20rem; } }
+        max-width: 25rem;
+        transform: translate(0); } }
     @media only screen and (min-width: 112.5em) {
       .about-us__img {
-        max-width: 20rem; } }
+        max-width: 25rem;
+        transform: translate(0); } }
   .about-us__text {
     display: grid;
     align-items: stretch;
@@ -497,7 +501,7 @@ body {
       padding: 6rem 3rem; } }
   .work-do .heading {
     grid-row: 1 / 2;
-    grid-column: 2 / 8;
+    grid-column: 1 / -1;
     justify-self: center; }
     @media only screen and (max-width: 35.7em) {
       .work-do .heading {
