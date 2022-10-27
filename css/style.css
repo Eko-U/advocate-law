@@ -57,13 +57,12 @@ body {
         font-size: 3rem; } }
     @media only screen and (max-width: 35.7em) {
       .heading-primary__main {
-        font-size: 2.5rem;
-        margin-bottom: 2rem !important; } }
+        margin-bottom: 1rem !important; } }
     @media only screen and (min-width: 112.5em) {
       .heading-primary__main {
-        font-size: 2.5rem;
-        margin-bottom: 2rem !important; } }
+        margin-bottom: 1rem !important; } }
   .heading-primary__sub {
+    font-family: "Nunito", sans-serif;
     margin: 0 auto;
     font-size: 2rem;
     width: 70%;
@@ -255,13 +254,17 @@ body {
         width: 100%;
         padding: 0 2rem;
         justify-self: start;
-        text-align: left; } }
+        text-align: left; }
+        .header__content > a {
+          display: block; } }
     @media only screen and (min-width: 112.5em) {
       .header__content {
         width: 100%;
         padding: 0 2rem;
         justify-self: start;
-        text-align: left; } }
+        text-align: left; }
+        .header__content > a {
+          display: block; } }
 
 .container {
   display: grid;
@@ -279,6 +282,12 @@ body {
 .nav-top {
   grid-column: 1 / -1;
   grid-row: 1 / 2; }
+  @media only screen and (max-width: 35.7em) {
+    .nav-top {
+      padding: .5rem 0; } }
+  @media only screen and (min-width: 112.5em) {
+    .nav-top {
+      padding: .5rem 0; } }
 
 .header {
   grid-column: 1  / -1;
