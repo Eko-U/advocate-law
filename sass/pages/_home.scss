@@ -1,4 +1,6 @@
 .about-us {
+  grid-column: center-start / center-end;
+
   padding: 5rem 0 10rem 0;
   display: grid;
   grid-template-columns: min-content 1fr;
@@ -6,13 +8,13 @@
   column-gap: 3rem;
   row-gap: 5rem;
 
-  @include responsive (tab-port) {
+  @include responsive(phone) {
+    grid-column: full-start / full-end;
     grid-template-columns: 1fr;
+    padding: 0 3rem;
   }
 
-  @include responsive(tab-land) {
-    padding: 13rem 0 10rem 0;
-  }
+  
   &__lawyer {
     height: 45rem;
     background-color: $color-secondary;
@@ -68,15 +70,23 @@
 }
 
 .work-do {
+  grid-column: full-start / full-end;
   padding: 10rem 0;
   background-color: $color-primary;
   color: $color-white;
   display: grid;
   grid-template-columns: 5rem repeat(3, 1fr) 5rem;
-  // grid-template-columns: subgrid;
   row-gap: 7rem;
-   @media only screen and (max-width: 25em) {
+
+  @media only screen and (max-width: 25em) {
     grid-template-columns: 1fr;
+  }
+  @include responsive(phone) {
+    row-gap: 4rem;
+    grid-column: full-start / full-end;
+  }
+  @include responsive(tab-land) {
+    padding: 6rem 3rem;
   }
 
   .heading {
@@ -84,9 +94,9 @@
     grid-column: 2 / 8;
     justify-self: center;
 
-    @media only screen and (max-width: 25em) {
-      grid-column: 1 / -1;
-    }
+    @include responsive(phone) {
+    grid-column: 1 / -1;
+  }
 
     .heading-tertiary {
       display: grid;
@@ -100,6 +110,10 @@
       height: 2px;
       background-color: $color-white;
       align-self: end;
+
+      @include responsive(phone) {
+        width: 3rem;
+      }
     }
     }
   }
@@ -111,8 +125,10 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
     gap: 5rem;
-    @media only screen and (max-width: 25em) {
-      grid-column: 1 / -1;
+
+    @include responsive(phone) {
+     grid-column: 1 / -1;
+     gap: 3rem;
     }
 
     div {
@@ -126,8 +142,7 @@
 
       p {
         grid-column: 2 / 3;
-
-        @media only screen and (max-width: 18.75em) {
+        @include responsive(phone) {
           grid-column: 1 / -1;
         }
       }
@@ -149,12 +164,25 @@
 
 
 .review {
+  grid-column: center-start / center-end;
   padding: 10rem 0;
+  
+  @include responsive(tab-land) {
+    padding: 6rem 3rem;
+  }
+  @include responsive(phone) {
+    grid-column: full-start / full-end;
+    grid-template-columns: 1fr;
+  }
 
   &__clients {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
     gap: 3rem;
+
+    @include responsive(phone) {
+      grid-template-columns: 1fr;
+    }
 
     & > div {
       box-shadow: 0 .35rem .7rem rgba(0,0,0, .3);
@@ -183,8 +211,11 @@
   transform: translateY(-50%);
 
   @include responsive(tab-land) {
-    padding: 10rem 5rem;
+    padding: 10rem 3rem;
     transform: translateY(0)
+  }
+  @include responsive(tab-land) {
+    padding: 6rem 3rem;
   }
 
   &__content {
@@ -232,15 +263,5 @@
         }
       }
     }
-  }
-}
-
-/* padding for all the section */
-.about-us,
-.work-do,
-.review {
-  @media only screen and (max-width: 25em) {
-    padding-left: $spacing-sm;
-    padding-right: $spacing-sm;
   }
 }

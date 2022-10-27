@@ -16,12 +16,17 @@
 
     &--number {
       display: flex;
+      align-items: center;
       gap: .7rem;
     }
 
     @include responsive(tab-port) {
       flex-direction: column;
       gap: .4rem;
+    }
+    @include responsive(phone) {
+      flex-direction: row;
+      gap: .8rem;
     }
   }
 
@@ -32,6 +37,10 @@
     text-align: center;
     cursor: pointer;
     @include grid-center;
+
+    @include responsive(phone) {
+     display: none;
+    }
 
     &:hover {
       background-color: rgba($color-secondary, .97);

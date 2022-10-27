@@ -1,4 +1,6 @@
 .footer {
+  grid-column: full-start / full-end;
+  
   padding-top: 10rem;
   padding-bottom: 5rem;
   background-image: linear-gradient(rgba($color-primary, .9), rgba($color-primary, .9)), url(../img/header-bk.png);
@@ -27,10 +29,14 @@
   &-logo__text {
     display: flex;
     flex-direction: column;
+    line-height: 1.2;
     span:first-child {
       font-size: 3rem;
       font-weight: bolder;
       color: $color-secondary;
+    }
+    span:last-child {
+      font-size: 1.8rem;
     }
   }
 
