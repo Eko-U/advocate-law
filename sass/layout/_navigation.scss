@@ -18,6 +18,11 @@
       display: flex;
       align-items: center;
       gap: .7rem;
+
+      & > span {
+        color: $color-white;
+        text-decoration: none;
+      }
     }
 
     @include responsive(tab-port) {

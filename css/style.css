@@ -138,6 +138,9 @@ body {
 .flex-col {
   flex-direction: column !important; }
 
+.align-center {
+  align-items: center; }
+
 .body-copy {
   font-size: 1.6rem; }
   @media only screen and (max-width: 56.25em) {
@@ -233,6 +236,9 @@ body {
     .footer__links:link > span:first-child, .footer__links:link > .icon, .footer__links:visited > span:first-child, .footer__links:visited > .icon {
       color: #ad7f62;
       fill: currentColor; }
+    @media only screen and (max-width: 56.25em) {
+      .footer__links:link, .footer__links:visited {
+        gap: .8rem; } }
   .footer__links:hover {
     font-weight: bolder;
     color: #cccccc; }
@@ -277,6 +283,8 @@ body {
         text-align: left; }
         .header__content > a {
           display: block; } }
+    .header__content > a:not(:last-child) {
+      margin-right: 1rem; }
 
 .container {
   display: grid;
@@ -341,7 +349,7 @@ body {
 
 /* overlay and hidden class */
 .overlay {
-  position: absolute;
+  position: fixed;
   top: 0;
   height: 100vh;
   width: 100%;
@@ -370,6 +378,9 @@ body {
       display: flex;
       align-items: center;
       gap: .7rem; }
+      .nav-top__call--number > span {
+        color: #fff;
+        text-decoration: none; }
     @media only screen and (max-width: 56.25em) {
       .nav-top__call {
         flex-direction: column;

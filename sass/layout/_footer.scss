@@ -87,6 +87,10 @@
         color: $color-secondary;
         fill: currentColor;
       }
+
+      @include responsive(tab-port) {
+        gap: .8rem;
+      }
     }
 
     &:hover {
