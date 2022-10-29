@@ -188,6 +188,14 @@
           transform: translateY(-.3rem) scale(1.05);
         }
       }
+      @include responsive(tab-port) {
+        height: 3rem;
+        width: 3rem;
+      }
+      @include responsive(phone) {
+        height: 2rem;
+        width: 2rem;
+      }
     }
   }
 }

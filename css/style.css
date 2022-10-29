@@ -509,6 +509,18 @@ body {
           transform: translateY(0.3rem) scale(1.05); }
         .side-nav__icons > svg:hover:nth-child(even) {
           transform: translateY(-0.3rem) scale(1.05); }
+      @media only screen and (max-width: 56.25em) {
+        .side-nav__icons > svg {
+          height: 3rem;
+          width: 3rem; } }
+      @media only screen and (max-width: 35.7em) {
+        .side-nav__icons > svg {
+          height: 2rem;
+          width: 2rem; } }
+      @media only screen and (min-width: 112.5em) {
+        .side-nav__icons > svg {
+          height: 2rem;
+          width: 2rem; } }
 
 .icon {
   height: 2rem;
