@@ -511,16 +511,8 @@ body {
           transform: translateY(-0.3rem) scale(1.05); }
       @media only screen and (max-width: 56.25em) {
         .side-nav__icons > svg {
-          height: 3rem;
-          width: 3rem; } }
-      @media only screen and (max-width: 35.7em) {
-        .side-nav__icons > svg {
-          height: 2rem;
-          width: 2rem; } }
-      @media only screen and (min-width: 112.5em) {
-        .side-nav__icons > svg {
-          height: 2rem;
-          width: 2rem; } }
+          height: 3.5rem;
+          width: 3.5rem; } }
 
 .icon {
   height: 2rem;

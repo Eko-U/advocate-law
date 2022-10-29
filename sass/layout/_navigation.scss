@@ -189,12 +189,8 @@
         }
       }
       @include responsive(tab-port) {
-        height: 3rem;
-        width: 3rem;
-      }
-      @include responsive(phone) {
-        height: 2rem;
-        width: 2rem;
+        height: 3.5rem;
+        width: 3.5rem;
       }
     }
   }
